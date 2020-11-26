@@ -9,7 +9,8 @@
 */
 html {
   font-family: "Spartan", sans-serif;
-  font-size: 16px;
+  font-size: 10px;
+  height: 100%;
 }
 
 body {
@@ -17,5 +18,91 @@ body {
   margin: 0;
   box-sizing: border-box;
   height: 100%;
+}
+
+/*
+    ### Review content ###
+*/
+.social-proof-section {
+  height: 100%;
+}
+
+.review {
+  padding: 10px;
+  height: 100%;
   background: url(/images/bg-pattern-bottom-mobile.svg) fixed no-repeat bottom center, url(/images/bg-pattern-top-mobile.svg) fixed no-repeat top center;
+  /*
+      ### Introduce ###
+  */
+  /*
+      ### Rates ###
+  */
+  /*
+      ### Opinions ###
+  */
+}
+.review__section {
+  text-align: center;
+}
+.review__title {
+  color: #502050;
+  font-size: 2.25rem;
+}
+.review__desc {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #937b92;
+}
+.review__item--rate {
+  background-color: #f7f2f7;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+}
+.review__star {
+  background: url(/images/icon-star.svg) repeat-x;
+  background-size: cover;
+}
+.review__desc--rate {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #502050;
+}
+.review__section--opinions {
+  display: flex;
+  flex-flow: column wrap;
+}
+.review__item--opinion {
+  flex: 1;
+  background-color: #502050;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.review__personal-data {
+  padding: 7px 10px 0px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 20px 20px;
+  grid-template-areas: "image name" "image state";
+  color: white;
+}
+.review__personal-photo {
+  grid-area: image;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.review__personal-name {
+  grid-area: name;
+  justify-self: start;
+}
+.review__personal-state {
+  grid-area: state;
+  justify-self: start;
+  align-self: start;
+}
+.review__desc--opinion {
+  text-align: initial;
+  padding: 10px;
 }
