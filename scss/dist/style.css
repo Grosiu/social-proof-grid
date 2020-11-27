@@ -78,11 +78,7 @@ body {
   padding: 5px;
   border-radius: 5px;
 }
-.opinions__desc {
-  text-align: initial;
-  padding: 10px;
-}
-.opinions .personals {
+.opinions__item .personals {
   color: #fff;
   padding: 7px 10px 0px;
   display: grid;
@@ -90,18 +86,22 @@ body {
   grid-template-rows: 20px 20px;
   grid-template-areas: "image name" "image state";
 }
-.opinions .personals__photo {
+.opinions__item .personals__photo {
   grid-area: image;
   width: 35px;
   height: 35px;
   border-radius: 50%;
 }
-.opinions .personals__name {
+.opinions__item .personals__name {
   grid-area: name;
   justify-self: start;
 }
-.opinions .personals__state {
+.opinions__item .personals__state {
   grid-area: state;
   justify-self: start;
   align-self: start;
+}
+.opinions__item__desc {
+  text-align: initial;
+  padding: 10px;
 }
