@@ -92,7 +92,12 @@ body {
   border-radius: 5px;
 }
 
-.opinions__personal-data {
+.opinions__desc {
+  text-align: initial;
+  padding: 10px;
+}
+
+.opinions .personals {
   color: #fff;
   padding: 7px 10px 0px;
   display: -ms-grid;
@@ -104,7 +109,7 @@ body {
       grid-template-areas: "image name" "image state";
 }
 
-.opinions__personal-photo {
+.opinions .personals__photo {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
@@ -114,7 +119,7 @@ body {
   border-radius: 50%;
 }
 
-.opinions__personal-name {
+.opinions .personals__name {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: name;
@@ -122,7 +127,7 @@ body {
       justify-self: start;
 }
 
-.opinions__personal-state {
+.opinions .personals__state {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: state;
@@ -131,10 +136,5 @@ body {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
-}
-
-.opinions__desc {
-  text-align: initial;
-  padding: 10px;
 }
 /*# sourceMappingURL=style.css.map */

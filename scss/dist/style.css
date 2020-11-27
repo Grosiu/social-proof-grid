@@ -78,7 +78,11 @@ body {
   padding: 5px;
   border-radius: 5px;
 }
-.opinions__personal-data {
+.opinions__desc {
+  text-align: initial;
+  padding: 10px;
+}
+.opinions .personals {
   color: #fff;
   padding: 7px 10px 0px;
   display: grid;
@@ -86,22 +90,18 @@ body {
   grid-template-rows: 20px 20px;
   grid-template-areas: "image name" "image state";
 }
-.opinions__personal-photo {
+.opinions .personals__photo {
   grid-area: image;
   width: 35px;
   height: 35px;
   border-radius: 50%;
 }
-.opinions__personal-name {
+.opinions .personals__name {
   grid-area: name;
   justify-self: start;
 }
-.opinions__personal-state {
+.opinions .personals__state {
   grid-area: state;
   justify-self: start;
   align-self: start;
-}
-.opinions__desc {
-  text-align: initial;
-  padding: 10px;
 }

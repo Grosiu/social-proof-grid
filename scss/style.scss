@@ -92,10 +92,13 @@ body {
         background-color: hsl(300, 43%, 22%);
         margin: 10px;
         padding: 5px;
-        border-radius: 5px;
-        
+        border-radius: 5px;  
     }
-    &__personal-data {
+    &__desc {
+        text-align: initial;
+        padding: 10px;
+    }
+    .personals {
         color: #fff;
         padding: 7px 10px 0px;
         display: grid;
@@ -103,32 +106,26 @@ body {
         grid-template-rows: 20px 20px;
         grid-template-areas: 
             "image name"
-            "image state"
-        ;
-        
-        
-    }
-    &__personal-photo {
+            "image state";
+    &__photo {
         grid-area: image;
         width: 35px;
         height: 35px;
         border-radius: 50%;
     }
-    &__personal-name{
+    &__name{
         grid-area: name;
         justify-self: start;
         
     }
-    &__personal-state{
+    &__state{
         grid-area: state;
         justify-self: start;
         align-self: start;
     }
-    &__desc {
-        text-align: initial;
-        padding: 10px;
-    }
-    
 }
+}
+
+
 
 
