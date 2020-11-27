@@ -23,86 +23,85 @@ body {
 /*
     ### Review content ###
 */
-.social-proof-section {
-  height: 100%;
-}
-
 .review {
   padding: 10px;
   height: 100%;
   background: url(/images/bg-pattern-bottom-mobile.svg) fixed no-repeat bottom center, url(/images/bg-pattern-top-mobile.svg) fixed no-repeat top center;
-  /*
-      ### Introduce ###
-  */
-  /*
-      ### Rates ###
-  */
-  /*
-      ### Opinions ###
-  */
 }
-.review__section {
+
+/*
+    ### Introduce ###
+*/
+.introduce {
   text-align: center;
 }
-.review__title {
+.introduce__title {
   color: #502050;
   font-size: 2.25rem;
 }
-.review__desc {
+.introduce__desc {
   font-weight: 500;
   font-size: 1.2rem;
   color: #937b92;
 }
-.review__item--rate {
+
+/*
+    ### Rates ###
+*/
+.rates__item {
   background-color: #f7f2f7;
   padding: 5px;
   margin: 10px;
   border-radius: 5px;
 }
-.review__star {
+.rates__star {
   background: url(/images/icon-star.svg) repeat-x;
   background-size: cover;
 }
-.review__desc--rate {
+.rates__desc {
   font-size: 1rem;
   font-weight: 700;
   color: #502050;
 }
-.review__section--opinions {
+
+/*
+    ### Opinions ###
+*/
+.opinions {
   display: flex;
   flex-flow: column wrap;
 }
-.review__item--opinion {
+.opinions__item {
   flex: 1;
   background-color: #502050;
   margin: 10px;
   padding: 5px;
   border-radius: 5px;
 }
-.review__personal-data {
+.opinions__personal-data {
+  color: #fff;
   padding: 7px 10px 0px;
   display: grid;
   grid-template-columns: 50px 1fr;
   grid-template-rows: 20px 20px;
   grid-template-areas: "image name" "image state";
-  color: white;
 }
-.review__personal-photo {
+.opinions__personal-photo {
   grid-area: image;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
 }
-.review__personal-name {
+.opinions__personal-name {
   grid-area: name;
   justify-self: start;
 }
-.review__personal-state {
+.opinions__personal-state {
   grid-area: state;
   justify-self: start;
   align-self: start;
 }
-.review__desc--opinion {
+.opinions__desc {
   text-align: initial;
   padding: 10px;
 }
