@@ -43,6 +43,7 @@ body {
   font-weight: 500;
   font-size: 1.2rem;
   color: #937b92;
+  padding: 5px;
 }
 
 /*
@@ -55,13 +56,16 @@ body {
   border-radius: 5px;
 }
 .rates__star {
+  height: 20px;
+  width: 85px;
   background: url(/images/icon-star.svg) repeat-x;
-  background-size: cover;
+  margin: 0 auto;
 }
 .rates__desc {
   font-size: 1rem;
   font-weight: 700;
   color: #502050;
+  text-align: center;
 }
 
 /*
@@ -75,33 +79,37 @@ body {
   flex: 1;
   background-color: #502050;
   margin: 10px;
-  padding: 5px;
+  padding: 25px;
   border-radius: 5px;
 }
 .opinions__item .personals {
   color: #fff;
-  padding: 7px 10px 0px;
   display: grid;
-  grid-template-columns: 50px 1fr;
-  grid-template-rows: 20px 20px;
+  grid-template-columns: 50px 100px;
+  grid-template-rows: 15px 15px;
   grid-template-areas: "image name" "image state";
+  padding: 5px 0 10px 0;
 }
 .opinions__item .personals__photo {
   grid-area: image;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
 }
 .opinions__item .personals__name {
   grid-area: name;
   justify-self: start;
+  align-self: center;
+  font-weight: 550;
 }
 .opinions__item .personals__state {
   grid-area: state;
   justify-self: start;
-  align-self: start;
+  align-self: center;
+  color: rgba(238, 104, 164, 0.6);
+  font-weight: 400;
 }
-.opinions__item__desc {
+.opinions__desc {
   text-align: initial;
-  padding: 10px;
+  color: #fff;
 }

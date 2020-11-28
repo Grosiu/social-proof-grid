@@ -11,12 +11,13 @@
 /*
     ### Variables ###
 */
-    $font: 'Spartan', sans-serif;
-    $fontsize: 10px;
-    $h1nratecolor:hsl(300, 43%, 22%);
-    $hfontsize: 2.25rem;
-    $descfontsize: 1.2rem;
-    $bgstars:hsl(300, 24%, 96%);
+$font: 'Spartan',
+sans-serif;
+$fontsize: 10px;
+$h1nratecolor:hsl(300, 43%, 22%);
+$hfontsize: 2.25rem;
+$descfontsize: 1.2rem;
+$bgstars:hsl(300, 24%, 96%);
 /*
     ### Globals ###
 */
@@ -26,10 +27,11 @@ html {
     font-size: $fontsize;
     height: 100%;
 }
+
 body {
     @include reset();
     height: 100%;
-    
+
 }
 
 /*
@@ -47,15 +49,19 @@ body {
 */
 .introduce {
     text-align: center;
+
     &__title {
         color: $h1nratecolor;
         font-size: $hfontsize;
+        
     }
+
     &__desc {
         font-weight: 500;
         font-size: $descfontsize;
         color: hsl(303, 10%, 53%);
-    }
+        padding: 5px;
+        }
 }
 
 /*
@@ -69,15 +75,20 @@ body {
         margin: 10px;
         border-radius: 5px;
     }
+
     &__star {
+        height: 20px;
+        width: 85px;
         background: url(/images/icon-star.svg) repeat-x;
-        background-size: cover;
-        
+        margin: 0 auto;
+
     }
+
     &__desc {
         font-size: 1rem;
         font-weight: 700;
-        color: hsl(300, 43%, 22%); 
+        color: hsl(300, 43%, 22%);
+        text-align: center;
     }
 }
 
@@ -87,46 +98,51 @@ body {
 .opinions {
     display: flex;
     flex-flow: column wrap;
+
     &__item {
         flex: 1;
         background-color: hsl(300, 43%, 22%);
         margin: 10px;
-        padding: 5px;
+        padding: 25px;
         border-radius: 5px;
+
         .personals {
             color: #fff;
-            padding: 7px 10px 0px;
             display: grid;
-            grid-template-columns: 50px 1fr;
-            grid-template-rows: 20px 20px;
-            grid-template-areas: 
+            grid-template-columns: 50px 100px;
+            grid-template-rows: 15px 15px;
+            grid-template-areas:
                 "image name"
                 "image state";
-        &__photo {
-            grid-area: image;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
+            padding: 5px 0 10px 0;
+
+            &__photo {
+                grid-area: image;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                
+            }
+
+            &__name {
+                grid-area: name;
+                justify-self: start;
+                align-self: center;
+                font-weight: 550;
+            }
+
+            &__state {
+                grid-area: state;
+                justify-self: start;
+                align-self: center;
+                color: hsla(333, 80%, 67%, .6);
+                font-weight: 400;
+            }
         }
-        &__name{
-            grid-area: name;
-            justify-self: start;
-            
-        }
-        &__state{
-            grid-area: state;
-            justify-self: start;
-            align-self: start;
-        }  
     }
+
     &__desc {
         text-align: initial;
-        padding: 10px;
+        color: #fff;
     }
-    
 }
-}
-
-
-
-
