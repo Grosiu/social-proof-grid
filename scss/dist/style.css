@@ -27,62 +27,72 @@ body {
   padding: 10px;
   height: 100%;
   background: url(/images/bg-pattern-bottom-mobile.svg) fixed no-repeat bottom center, url(/images/bg-pattern-top-mobile.svg) fixed no-repeat top center;
+  /*
+      ### Introduce ###
+  */
+  /*
+      ### Rates ###
+  */
+  /*
+      ### Opinions ###
+  */
 }
-
-/*
-    ### Introduce ###
-*/
-.introduce {
+@media screen and (min-width: 1024px) {
+  .review {
+    background: url(/images/bg-pattern-top-desktop.svg) fixed no-repeat top left, url(/images/bg-pattern-bottom-desktop.svg) fixed no-repeat bottom right;
+    padding: 100px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 100px);
+  }
+}
+.review .introduce {
   text-align: center;
 }
-.introduce__title {
+.review .introduce__title {
   color: #502050;
   font-size: 2.25rem;
 }
-.introduce__desc {
+.review .introduce__desc {
   font-weight: 500;
   font-size: 1.2rem;
   color: #937b92;
   padding: 5px;
 }
-
-/*
-    ### Rates ###
-*/
-.rates__item {
+.review .rates__item {
   background-color: #f7f2f7;
   padding: 5px;
   margin: 10px;
   border-radius: 5px;
 }
-.rates__star {
+.review .rates__star {
   height: 20px;
   width: 85px;
   background: url(/images/icon-star.svg) repeat-x;
   margin: 0 auto;
 }
-.rates__desc {
+.review .rates__desc {
   font-size: 1rem;
   font-weight: 700;
   color: #502050;
   text-align: center;
 }
-
-/*
-    ### Opinions ###
-*/
-.opinions {
+.review .opinions {
   display: flex;
   flex-flow: column wrap;
 }
-.opinions__item {
+.review .opinions__item {
   flex: 1;
   background-color: #502050;
   margin: 10px;
   padding: 25px;
   border-radius: 5px;
 }
-.opinions__item .personals {
+.review .opinions__quote {
+  text-align: initial;
+  color: #fff;
+}
+.review .personals {
   color: #fff;
   display: grid;
   grid-template-columns: 50px 100px;
@@ -90,26 +100,24 @@ body {
   grid-template-areas: "image name" "image state";
   padding: 5px 0 10px 0;
 }
-.opinions__item .personals__photo {
+.review .personals__photo {
   grid-area: image;
   width: 30px;
   height: 30px;
   border-radius: 50%;
 }
-.opinions__item .personals__name {
-  grid-area: name;
+.review .personals__name {
   justify-self: start;
   align-self: center;
+  grid-area: name;
   font-weight: 550;
 }
-.opinions__item .personals__state {
-  grid-area: state;
+.review .personals__state {
   justify-self: start;
   align-self: center;
+  grid-area: state;
   color: rgba(238, 104, 164, 0.6);
   font-weight: 400;
 }
-.opinions__quote {
-  text-align: initial;
-  color: #fff;
-}
+
+/* To make code more readable i resign from 3 level deep nesting */
