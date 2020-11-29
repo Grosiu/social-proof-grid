@@ -24,7 +24,7 @@ body {
 /*
     ### Review content ###
 */
-.review {
+.wrapper {
   padding: 10px;
   height: 100%;
   background: url(/images/bg-pattern-bottom-mobile.svg) fixed no-repeat bottom center, url(/images/bg-pattern-top-mobile.svg) fixed no-repeat top center;
@@ -40,7 +40,7 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-  .review {
+  .wrapper {
     background: url(/images/bg-pattern-top-desktop.svg) fixed no-repeat top left, url(/images/bg-pattern-bottom-desktop.svg) fixed no-repeat bottom right;
     padding: 100px;
     display: -ms-grid;
@@ -52,69 +52,96 @@ body {
   }
 }
 
-.review .introduce {
+.wrapper .introduce {
   text-align: center;
 }
 
-.review .introduce__title {
+@media screen and (min-width: 1024px) {
+  .wrapper .introduce {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / 4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1 / 4;
+  }
+}
+
+.wrapper .introduce__title {
   color: #502050;
   font-size: 2.25rem;
 }
 
-.review .introduce__desc {
+.wrapper .introduce__desc {
   font-weight: 500;
   font-size: 1.2rem;
   color: #937b92;
   padding: 5px;
 }
 
-.review .rates__item {
+.wrapper .rates__item {
   background-color: #f7f2f7;
   padding: 5px;
   margin: 10px;
   border-radius: 5px;
 }
 
-.review .rates__star {
+.wrapper .rates__star {
   height: 20px;
   width: 85px;
   background: url(/images/icon-star.svg) repeat-x;
   margin: 0 auto;
 }
 
-.review .rates__desc {
+.wrapper .rates__desc {
   font-size: 1rem;
   font-weight: 700;
   color: #502050;
   text-align: center;
 }
 
-.review .opinions {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+@media screen and (min-width: 1024px) {
+  .wrapper .opinions {
+    grid-column: 1 / -1;
+    grid-row: 4 / -1;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    gap: 0;
+  }
 }
 
-.review .opinions__item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.wrapper .opinions__item {
   background-color: #502050;
   margin: 10px;
   padding: 25px;
   border-radius: 5px;
 }
 
-.review .opinions__quote {
+@media screen and (min-width: 1024px) {
+  .wrapper .opinions__item--first {
+    height: 200px;
+    width: 300px;
+  }
+  .wrapper .opinions__item--second {
+    height: 200px;
+    width: 300px;
+  }
+  .wrapper .opinions__item--third {
+    height: 200px;
+    width: 300px;
+  }
+}
+
+.wrapper .opinions__quote {
   text-align: initial;
   color: #fff;
 }
 
-.review .personals {
+.wrapper .personals {
   color: #fff;
   display: -ms-grid;
   display: grid;
@@ -126,7 +153,7 @@ body {
   padding: 5px 0 10px 0;
 }
 
-.review .personals__photo {
+.wrapper .personals__photo {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
@@ -136,7 +163,7 @@ body {
   border-radius: 50%;
 }
 
-.review .personals__name {
+.wrapper .personals__name {
   -ms-grid-column-align: start;
       justify-self: start;
   -ms-flex-item-align: center;
@@ -148,7 +175,7 @@ body {
   font-weight: 550;
 }
 
-.review .personals__state {
+.wrapper .personals__state {
   -ms-grid-column-align: start;
       justify-self: start;
   -ms-flex-item-align: center;
